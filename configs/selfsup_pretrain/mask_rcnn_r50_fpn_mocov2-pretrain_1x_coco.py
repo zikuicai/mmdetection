@@ -5,9 +5,8 @@ _base_ = [
 ]
 
 model = dict(
+    pretrained='./mocov2_r50_800ep_pretrain.pth',
     backbone=dict(
         frozen_stages=0,
         norm_cfg=dict(type='SyncBN', requires_grad=True),
-        norm_eval=False,
-        init_cfg=dict(
-            type='Pretrained', checkpoint='./mocov2_r50_800ep_pretrain.pth')))
+        norm_eval=False))
