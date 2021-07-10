@@ -1,5 +1,3 @@
-import warnings
-
 import mmcv
 import torch
 from mmcv.image import tensor2imgs
@@ -22,10 +20,7 @@ class RPN(BaseDetector):
                  pretrained=None,
                  init_cfg=None):
         super(RPN, self).__init__(init_cfg)
-        if pretrained:
-            warnings.warn('DeprecationWarning: pretrained is deprecated, '
-                          'please use "init_cfg" instead')
-            backbone.pretrained = pretrained
+        backbone.pretrained = pretrained
         self.backbone = build_backbone(backbone)
         self.neck = build_neck(neck) if neck is not None else None
         rpn_train_cfg = train_cfg.rpn if train_cfg is not None else None

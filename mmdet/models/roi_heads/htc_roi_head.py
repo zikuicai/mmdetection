@@ -25,7 +25,7 @@ class HybridTaskCascadeRoIHead(CascadeRoIHead):
                  **kwargs):
         super(HybridTaskCascadeRoIHead,
               self).__init__(num_stages, stage_loss_weights, **kwargs)
-        assert self.with_bbox
+        assert self.with_bbox and self.with_mask
         assert not self.with_shared_head  # shared head is not supported
 
         if semantic_head is not None:

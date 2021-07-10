@@ -3,6 +3,7 @@ _base_ = [
 ]
 model = dict(
     type='DETR',
+    pretrained='torchvision://resnet50',
     backbone=dict(
         type='ResNet',
         depth=50,
@@ -11,8 +12,7 @@ model = dict(
         frozen_stages=1,
         norm_cfg=dict(type='BN', requires_grad=False),
         norm_eval=True,
-        style='pytorch',
-        init_cfg=dict(type='Pretrained', checkpoint='torchvision://resnet50')),
+        style='pytorch'),
     bbox_head=dict(
         type='DETRHead',
         num_classes=80,

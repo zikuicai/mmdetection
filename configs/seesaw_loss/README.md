@@ -7,7 +7,7 @@
 We provide config files to reproduce the instance segmentation performance in the CVPR 2021 paper for [Seesaw Loss for Long-Tailed Instance Segmentation](https://arxiv.org/abs/2008.10032).
 
 ```latex
-@inproceedings{wang2021seesaw,
+@inproceedings{gupta2019lvis,
   title={Seesaw Loss for Long-Tailed Instance Segmentation},
   author={Jiaqi Wang and Wenwei Zhang and Yuhang Zang and Yuhang Cao and Jiangmiao Pang and Tao Gong and Kai Chen and Ziwei Liu and Chen Change Loy and Dahua Lin},
   booktitle={Proceedings of the {IEEE} Conference on Computer Vision and Pattern Recognition},
@@ -18,7 +18,7 @@ We provide config files to reproduce the instance segmentation performance in th
 
 * Please setup [LVIS dataset](../lvis/README.md) for MMDetection.
 
-* RFS indicates to use oversample strategy [here](../../docs/tutorials/customize_dataset.md#class-balanced-dataset) with oversample threshold `1e-3`.
+* RFS indicates to use oversample strategy [here](../../docs/tutorials/new_dataset.md#class-balanced-dataset) with oversample threshold `1e-3`.
 
 ## Results and models of Seasaw Loss on LVIS v1 dataset
 
